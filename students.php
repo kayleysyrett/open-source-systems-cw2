@@ -30,7 +30,7 @@
                            <th>County</th>
                            <th>Country</th>
                            <th>Postcode</th>
-                           <th>image</th>
+                           <th>File</th>
                 </tr>"
                            
                            
@@ -48,7 +48,7 @@
          $data['content'] .= "<td> {$row["county"]} </td>";
          $data['content'] .= "<td> {$row["country"]} </td>";
          $data['content'] .= "<td> {$row["postcode"]} </td>";
-         $data['content'] .= "<td> {$row["image"]} </td>";
+         $data['content'] .= "<td> {$row["imagedata"]} </td>";
          $data['content'] .= "<td> <input type='checkbox' name='students[]' value='$row[studentid]'/></td>";
          $data['content'] .= "</tr>";
       }

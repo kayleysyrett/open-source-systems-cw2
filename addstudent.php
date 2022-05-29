@@ -21,9 +21,9 @@ if (isset($_SESSION['id'])) {
    // insert statememt 
      
          $sql = "INSERT INTO student 
-                  (studentid, password, dob, firstname, lastname, house, town, county, country, postcode, image)
+                  (studentid, password, dob, firstname, lastname, house, town, county, country, postcode, imagedata)
                   VALUES ('{$_POST['studentid']}', '$hashed_password', '{$_POST['dob']}', '{$_POST['firstname']}', '{$_POST['lastname']}',
-                         '{$_POST['house']}', '{$_POST['town']}', '{$_POST['county']}', '{$_POST['country']}', '{$_POST['postcode']}', '{$_POST['image']}')";
+                         '{$_POST['house']}', '{$_POST['town']}', '{$_POST['county']}', '{$_POST['country']}', '{$_POST['postcode']}', '{$_POST['imagedata']}')";
 
       echo $sql;
 
@@ -35,13 +35,7 @@ if (isset($_SESSION['id'])) {
 
    }
    else {
-      // Build a SQL statment to return the student record with the id that
-      // matches that of the session variable.
 
-
-      // using <<<EOD notation to allow building of a multi-line string
-      // see http://stackoverflow.com/questions/6924193/what-is-the-use-of-eod-in-php for info
-      // also http://stackoverflow.com/questions/8280360/formatting-an-array-value-inside-a-heredoc
       $data['content'] = <<<EOD
 
       <h2>Add New Student</h2>
@@ -68,7 +62,7 @@ if (isset($_SESSION['id'])) {
    Postcode :
    <input name="postcode" type="text"  value="" /><br/>
   Select image to upload:
-  <input name="image" type="file" value="">
+  <input name="imagedata" type="file" accept="image/jpeg "value="">
   </br>
    <input type="submit" value="Save" name="submit"/>
    </form>

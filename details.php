@@ -22,6 +22,7 @@ if (isset($_SESSION['id'])) {
       $sql .= "county ='" . $_POST['txtcounty']  . "',";
       $sql .= "country ='" . $_POST['txtcountry']  . "',";
       $sql .= "postcode ='" . $_POST['txtpostcode']  . "' ";
+      $sql .= "imagedata ='" . $_POST['txtimagedata']  . "' ";
       $sql .= "where studentid = '" . $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
 
